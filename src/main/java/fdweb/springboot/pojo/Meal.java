@@ -1,6 +1,6 @@
 package fdweb.springboot.pojo;
 
-public class meal {
+public class Meal {
     private int mealID;
 
     private float money;
@@ -13,6 +13,17 @@ public class meal {
 
     public int getMealID() {
         return mealID;
+    }
+
+    @Override
+    public String toString() {
+        return "Meal{" +
+                "mealID=" + mealID +
+                ", money=" + money +
+                ", time=" + time +
+                ", operatorID=" + operatorID +
+                ", name='" + name + '\'' +
+                '}';
     }
 
     public void setMealID(int mealID) {

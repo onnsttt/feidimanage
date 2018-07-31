@@ -1,6 +1,6 @@
 package fdweb.springboot.pojo;
 
-public class userinfo {
+public class Userinfo {
     private String phone;
 
     private String password;
@@ -16,6 +16,20 @@ public class userinfo {
     private int machineinfo;
 
     private String openid;
+
+    @Override
+    public String toString() {
+        return "Userinfo{" +
+                "phone='" + phone + '\'' +
+                ", password='" + password + '\'' +
+                ", money=" + money +
+                ", state=" + state +
+                ", recommend_phone='" + recommend_phone + '\'' +
+                ", recommmend_num=" + recommmend_num +
+                ", machineinfo=" + machineinfo +
+                ", openid='" + openid + '\'' +
+                '}';
+    }
 
     public String getPhone() {
         return phone;

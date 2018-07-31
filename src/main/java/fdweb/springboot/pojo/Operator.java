@@ -1,6 +1,6 @@
 package fdweb.springboot.pojo;
 
-public class operator {
+public class Operator {
     private int operatorID;
 
     private String name;
@@ -39,6 +39,18 @@ public class operator {
 
     public String getPhone() {
         return phone;
+    }
+
+    @Override
+    public String toString() {
+        return "Operator{" +
+                "operatorID=" + operatorID +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", phone='" + phone + '\'' +
+                ", agentsID=" + agentsID +
+                ", nickname='" + nickname + '\'' +
+                '}';
     }
 
     public void setPhone(String phone) {

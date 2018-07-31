@@ -1,6 +1,6 @@
 package fdweb.springboot.pojo;
 
-public class agents {
+public class Agents {
 
     private int agentsID;
 
@@ -11,6 +11,17 @@ public class agents {
     private String phone;
 
     private int father;
+
+    @Override
+    public String toString() {
+        return "Agents{" +
+                "agentsID=" + agentsID +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", phone='" + phone + '\'' +
+                ", father=" + father +
+                '}';
+    }
 
     public int getAgentsID() {
         return agentsID;

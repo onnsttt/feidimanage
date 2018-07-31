@@ -1,6 +1,6 @@
 package fdweb.springboot.pojo;
 
-public class machineinfo {
+public class Machineinfo {
 
     private int machineID;
 
@@ -17,6 +17,20 @@ public class machineinfo {
     private int handel;
 
     private String Online;
+
+    @Override
+    public String toString() {
+        return "Machineinfo{" +
+                "machineID=" + machineID +
+                ", IMEI='" + IMEI + '\'' +
+                ", state='" + state + '\'' +
+                ", water='" + water + '\'' +
+                ", foam='" + foam + '\'' +
+                ", operatorID=" + operatorID +
+                ", handel=" + handel +
+                ", Online='" + Online + '\'' +
+                '}';
+    }
 
     public int getMachineID() {
         return machineID;

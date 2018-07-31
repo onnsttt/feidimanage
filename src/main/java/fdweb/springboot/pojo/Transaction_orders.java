@@ -1,6 +1,6 @@
 package fdweb.springboot.pojo;
 
-public class transaction_orders {
+public class Transaction_orders {
 
     private int orderID;
 
@@ -21,6 +21,22 @@ public class transaction_orders {
     private float meal_money;
 
     private String tansaction_date;
+
+    @Override
+    public String toString() {
+        return "Transaction_orders{" +
+                "orderID=" + orderID +
+                ", merchant_ordersID='" + merchant_ordersID + '\'' +
+                ", operator_nickname='" + operator_nickname + '\'' +
+                ", user_phone='" + user_phone + '\'' +
+                ", pay_order='" + pay_order + '\'' +
+                ", machine_IMEI='" + machine_IMEI + '\'' +
+                ", meal_name='" + meal_name + '\'' +
+                ", pay_scene='" + pay_scene + '\'' +
+                ", meal_money=" + meal_money +
+                ", tansaction_date='" + tansaction_date + '\'' +
+                '}';
+    }
 
     public int getOrderID() {
         return orderID;

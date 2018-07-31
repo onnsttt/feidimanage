@@ -1,12 +1,21 @@
 package fdweb.springboot.pojo;
 
-public class card {
+public class Card {
 
     private String number;
 
     private float money;
 
     private int id;
+
+    @Override
+    public String toString() {
+        return "Card{" +
+                "number='" + number + '\'' +
+                ", money=" + money +
+                ", id=" + id +
+                '}';
+    }
 
     public String getNumber() {
         return number;

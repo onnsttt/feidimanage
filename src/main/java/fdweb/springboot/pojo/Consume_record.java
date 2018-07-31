@@ -1,6 +1,6 @@
 package fdweb.springboot.pojo;
 
-public class consume_record {
+public class Consume_record {
     private int consume_id;
 
     private String user_phone;
@@ -16,6 +16,20 @@ public class consume_record {
     private float cousume_water_money;
 
     private float consume_pm_money;
+
+    @Override
+    public String toString() {
+        return "Consume_record{" +
+                "consume_id=" + consume_id +
+                ", user_phone='" + user_phone + '\'' +
+                ", consume_money=" + consume_money +
+                ", cousume_time='" + cousume_time + '\'' +
+                ", transaction_date='" + transaction_date + '\'' +
+                ", machine_id=" + machine_id +
+                ", cousume_water_money=" + cousume_water_money +
+                ", consume_pm_money=" + consume_pm_money +
+                '}';
+    }
 
     public int getConsume_id() {
         return consume_id;

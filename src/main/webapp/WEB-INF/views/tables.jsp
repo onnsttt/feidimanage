@@ -1,7 +1,6 @@
 <%@ page import="com.mysql.jdbc.Connection" %>
 <%@ page import="com.mysql.jdbc.PreparedStatement" %>
 <%@ page import="java.sql.ResultSet" %>
-<%@ page import="enti.Connect" %><%--
   Created by IntelliJ IDEA.
   User: 欧鹏程
   Date: 2018/7/29
@@ -272,7 +271,7 @@
                                         if(i++%2==0){
                                             out.println("<tr class=\"gradeX\">");
                                             out.println("<td>"+resultSet.getString("IMEI")+"</td>");
-                                            out.println("<td>"+resultSet.getInt("operator")+"</td>");
+//                                            out.println("<td>"+resultSet.getInt("operator")+"</td>");
                                             out.println("<td>"+resultSet.getBoolean("State")+"</td>");
                                             out.println("<td>"+resultSet.getInt("water")+"</td>");
                                             out.println("<td>\n" +
@@ -290,7 +289,7 @@
                                             if(i++%2==0){
                                                 out.println("<tr class=\"even gradeC\">");
                                                 out.println("<td>"+resultSet.getString("IMEI")+"</td>");
-                                                out.println("<td>"+resultSet.getInt("operator")+"</td>");
+//                                                out.println("<td>"+resultSet.getInt("operator")+"</td>");
                                                 out.println("<td>"+resultSet.getBoolean("State")+"</td>");
                                                 out.println("<td>"+resultSet.getInt("water")+"</td>");
                                                 out.println("<td>\n" +
