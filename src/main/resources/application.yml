@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://118.126.102.53:3306
+    username: feidi
+    password: Feidi123456
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
