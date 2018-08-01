@@ -1,97 +1,137 @@
 package fdweb.springboot.pojo;
 
+import javax.persistence.*;
+
+@Table(name = "userinfo")
 public class Userinfo {
+    @Id
     private String phone;
 
     private String password;
 
-    private float money;
+    private Float money;
 
-    private boolean state;
+    private String state;
 
-    private String recommend_phone;
+    @Column(name = "recommend_phone")
+    private String recommendPhone;
 
-    private int recommmend_num;
+    @Column(name = "recommend_num")
+    private Integer recommendNum;
 
-    private int machineinfo;
+    private Integer machineinfo;
 
     private String openid;
 
-    @Override
-    public String toString() {
-        return "Userinfo{" +
-                "phone='" + phone + '\'' +
-                ", password='" + password + '\'' +
-                ", money=" + money +
-                ", state=" + state +
-                ", recommend_phone='" + recommend_phone + '\'' +
-                ", recommmend_num=" + recommmend_num +
-                ", machineinfo=" + machineinfo +
-                ", openid='" + openid + '\'' +
-                '}';
-    }
-
+    /**
+     * @return phone
+     */
     public String getPhone() {
         return phone;
     }
 
+    /**
+     * @param phone
+     */
     public void setPhone(String phone) {
-        this.phone = phone;
+        this.phone = phone == null ? null : phone.trim();
     }
 
+    /**
+     * @return password
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * @param password
+     */
     public void setPassword(String password) {
-        this.password = password;
+        this.password = password == null ? null : password.trim();
     }
 
-    public float getMoney() {
+    /**
+     * @return money
+     */
+    public Float getMoney() {
         return money;
     }
 
-    public void setMoney(float money) {
+    /**
+     * @param money
+     */
+    public void setMoney(Float money) {
         this.money = money;
     }
 
-    public boolean isState() {
+    /**
+     * @return state
+     */
+    public String getState() {
         return state;
     }
 
-    public void setState(boolean state) {
-        this.state = state;
+    /**
+     * @param state
+     */
+    public void setState(String state) {
+        this.state = state == null ? null : state.trim();
     }
 
-    public String getRecommend_phone() {
-        return recommend_phone;
+    /**
+     * @return recommend_phone
+     */
+    public String getRecommendPhone() {
+        return recommendPhone;
     }
 
-    public void setRecommend_phone(String recommend_phone) {
-        this.recommend_phone = recommend_phone;
+    /**
+     * @param recommendPhone
+     */
+    public void setRecommendPhone(String recommendPhone) {
+        this.recommendPhone = recommendPhone == null ? null : recommendPhone.trim();
     }
 
-    public int getRecommmend_num() {
-        return recommmend_num;
+    /**
+     * @return recommend_num
+     */
+    public Integer getRecommendNum() {
+        return recommendNum;
     }
 
-    public void setRecommmend_num(int recommmend_num) {
-        this.recommmend_num = recommmend_num;
+    /**
+     * @param recommendNum
+     */
+    public void setRecommendNum(Integer recommendNum) {
+        this.recommendNum = recommendNum;
     }
 
-    public int getMachineinfo() {
+    /**
+     * @return machineinfo
+     */
+    public Integer getMachineinfo() {
         return machineinfo;
     }
 
-    public void setMachineinfo(int machineinfo) {
+    /**
+     * @param machineinfo
+     */
+    public void setMachineinfo(Integer machineinfo) {
         this.machineinfo = machineinfo;
     }
 
+    /**
+     * @return openid
+     */
     public String getOpenid() {
         return openid;
     }
 
+    /**
+     * @param openid
+     */
     public void setOpenid(String openid) {
-        this.openid = openid;
+        this.openid = openid == null ? null : openid.trim();
     }
 }

@@ -1,8 +1,12 @@
 package fdweb.springboot.pojo;
 
-public class Agents {
+import javax.persistence.*;
 
-    private int agentsID;
+@Table(name = "agents")
+public class Agents {
+    @Id
+    @Column(name = "agentsID")
+    private Integer agentsid;
 
     private String name;
 
@@ -10,56 +14,75 @@ public class Agents {
 
     private String phone;
 
-    private int father;
+    private Integer father;
 
-    @Override
-    public String toString() {
-        return "Agents{" +
-                "agentsID=" + agentsID +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                ", phone='" + phone + '\'' +
-                ", father=" + father +
-                '}';
+    /**
+     * @return agentsID
+     */
+    public Integer getAgentsid() {
+        return agentsid;
     }
 
-    public int getAgentsID() {
-        return agentsID;
+    /**
+     * @param agentsid
+     */
+    public void setAgentsid(Integer agentsid) {
+        this.agentsid = agentsid;
     }
 
-    public void setAgentsID(int agentsID) {
-        this.agentsID = agentsID;
-    }
-
+    /**
+     * @return name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @param name
+     */
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 
+    /**
+     * @return password
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * @param password
+     */
     public void setPassword(String password) {
-        this.password = password;
+        this.password = password == null ? null : password.trim();
     }
 
+    /**
+     * @return phone
+     */
     public String getPhone() {
         return phone;
     }
 
+    /**
+     * @param phone
+     */
     public void setPhone(String phone) {
-        this.phone = phone;
+        this.phone = phone == null ? null : phone.trim();
     }
 
-    public int getFather() {
+    /**
+     * @return father
+     */
+    public Integer getFather() {
         return father;
     }
 
-    public void setFather(int father) {
+    /**
+     * @param father
+     */
+    public void setFather(Integer father) {
         this.father = father;
     }
 }

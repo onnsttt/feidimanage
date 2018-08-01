@@ -1,7 +1,12 @@
 package fdweb.springboot.pojo;
 
+import javax.persistence.*;
+
+@Table(name = "operator")
 public class Operator {
-    private int operatorID;
+    @Id
+    @Column(name = "operatorID")
+    private Integer operatorid;
 
     private String name;
 
@@ -9,67 +14,92 @@ public class Operator {
 
     private String phone;
 
-    private int agentsID;
+    @Column(name = "agentsID")
+    private Integer agentsid;
 
     private String nickname;
 
-    public int getOperatorID() {
-        return operatorID;
+    /**
+     * @return operatorID
+     */
+    public Integer getOperatorid() {
+        return operatorid;
     }
 
-    public void setOperatorID(int operatorID) {
-        this.operatorID = operatorID;
+    /**
+     * @param operatorid
+     */
+    public void setOperatorid(Integer operatorid) {
+        this.operatorid = operatorid;
     }
 
+    /**
+     * @return name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @param name
+     */
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 
+    /**
+     * @return password
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * @param password
+     */
     public void setPassword(String password) {
-        this.password = password;
+        this.password = password == null ? null : password.trim();
     }
 
+    /**
+     * @return phone
+     */
     public String getPhone() {
         return phone;
     }
 
-    @Override
-    public String toString() {
-        return "Operator{" +
-                "operatorID=" + operatorID +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                ", phone='" + phone + '\'' +
-                ", agentsID=" + agentsID +
-                ", nickname='" + nickname + '\'' +
-                '}';
-    }
-
+    /**
+     * @param phone
+     */
     public void setPhone(String phone) {
-        this.phone = phone;
+        this.phone = phone == null ? null : phone.trim();
     }
 
-    public int getAgentsID() {
-        return agentsID;
+    /**
+     * @return agentsID
+     */
+    public Integer getAgentsid() {
+        return agentsid;
     }
 
-    public void setAgentsID(int agentsID) {
-        this.agentsID = agentsID;
+    /**
+     * @param agentsid
+     */
+    public void setAgentsid(Integer agentsid) {
+        this.agentsid = agentsid;
     }
 
+    /**
+     * @return nickname
+     */
     public String getNickname() {
         return nickname;
     }
 
+    /**
+     * @param nickname
+     */
     public void setNickname(String nickname) {
-        this.nickname = nickname;
+        this.nickname = nickname == null ? null : nickname.trim();
     }
 }

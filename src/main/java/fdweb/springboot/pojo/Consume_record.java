@@ -1,97 +1,185 @@
 package fdweb.springboot.pojo;
 
+import javax.persistence.*;
+
+@Table(name = "consume_record")
 public class Consume_record {
-    private int consume_id;
+    /**
+     * 消费记录ID
+     */
+    @Id
+    @Column(name = "consume_id")
+    private Integer consumeId;
 
-    private String user_phone;
+    @Column(name = "user_phone")
+    private String userPhone;
 
-    private float consume_money;
+    /**
+     * 消费金额
+     */
+    @Column(name = "consume_money")
+    private Float consumeMoney;
 
-    private String cousume_time;
+    /**
+     * 消费时长
+     */
+    @Column(name = "consume_time")
+    private String consumeTime;
 
-    private String transaction_date;
+    /**
+     * 消费发生时间
+     */
+    @Column(name = "transaction_date")
+    private String transactionDate;
 
-    private int machine_id;
+    @Column(name = "machine_id")
+    private Integer machineId;
 
-    private float cousume_water_money;
+    /**
+     * 消费清水金额
+     */
+    @Column(name = "consume_water_money")
+    private Float consumeWaterMoney;
 
-    private float consume_pm_money;
+    /**
+     * 消费泡沫金额
+     */
+    @Column(name = "consume_pm_money")
+    private Float consumePmMoney;
 
-    @Override
-    public String toString() {
-        return "Consume_record{" +
-                "consume_id=" + consume_id +
-                ", user_phone='" + user_phone + '\'' +
-                ", consume_money=" + consume_money +
-                ", cousume_time='" + cousume_time + '\'' +
-                ", transaction_date='" + transaction_date + '\'' +
-                ", machine_id=" + machine_id +
-                ", cousume_water_money=" + cousume_water_money +
-                ", consume_pm_money=" + consume_pm_money +
-                '}';
+    /**
+     * 获取消费记录ID
+     *
+     * @return consume_id - 消费记录ID
+     */
+    public Integer getConsumeId() {
+        return consumeId;
     }
 
-    public int getConsume_id() {
-        return consume_id;
+    /**
+     * 设置消费记录ID
+     *
+     * @param consumeId 消费记录ID
+     */
+    public void setConsumeId(Integer consumeId) {
+        this.consumeId = consumeId;
     }
 
-    public void setConsume_id(int consume_id) {
-        this.consume_id = consume_id;
+    /**
+     * @return user_phone
+     */
+    public String getUserPhone() {
+        return userPhone;
     }
 
-    public String getUser_phone() {
-        return user_phone;
+    /**
+     * @param userPhone
+     */
+    public void setUserPhone(String userPhone) {
+        this.userPhone = userPhone == null ? null : userPhone.trim();
     }
 
-    public void setUser_phone(String user_phone) {
-        this.user_phone = user_phone;
+    /**
+     * 获取消费金额
+     *
+     * @return consume_money - 消费金额
+     */
+    public Float getConsumeMoney() {
+        return consumeMoney;
     }
 
-    public float getConsume_money() {
-        return consume_money;
+    /**
+     * 设置消费金额
+     *
+     * @param consumeMoney 消费金额
+     */
+    public void setConsumeMoney(Float consumeMoney) {
+        this.consumeMoney = consumeMoney;
     }
 
-    public void setConsume_money(float consume_money) {
-        this.consume_money = consume_money;
+    /**
+     * 获取消费时长
+     *
+     * @return consume_time - 消费时长
+     */
+    public String getConsumeTime() {
+        return consumeTime;
     }
 
-    public String getCousume_time() {
-        return cousume_time;
+    /**
+     * 设置消费时长
+     *
+     * @param consumeTime 消费时长
+     */
+    public void setConsumeTime(String consumeTime) {
+        this.consumeTime = consumeTime == null ? null : consumeTime.trim();
     }
 
-    public void setCousume_time(String cousume_time) {
-        this.cousume_time = cousume_time;
+    /**
+     * 获取消费发生时间
+     *
+     * @return transaction_date - 消费发生时间
+     */
+    public String getTransactionDate() {
+        return transactionDate;
     }
 
-    public String getTransaction_date() {
-        return transaction_date;
+    /**
+     * 设置消费发生时间
+     *
+     * @param transactionDate 消费发生时间
+     */
+    public void setTransactionDate(String transactionDate) {
+        this.transactionDate = transactionDate == null ? null : transactionDate.trim();
     }
 
-    public void setTransaction_date(String transaction_date) {
-        this.transaction_date = transaction_date;
+    /**
+     * @return machine_id
+     */
+    public Integer getMachineId() {
+        return machineId;
     }
 
-    public int getMachine_id() {
-        return machine_id;
+    /**
+     * @param machineId
+     */
+    public void setMachineId(Integer machineId) {
+        this.machineId = machineId;
     }
 
-    public void setMachine_id(int machine_id) {
-        this.machine_id = machine_id;
+    /**
+     * 获取消费清水金额
+     *
+     * @return consume_water_money - 消费清水金额
+     */
+    public Float getConsumeWaterMoney() {
+        return consumeWaterMoney;
     }
 
-    public float getCousume_water_money() {
-        return cousume_water_money;
+    /**
+     * 设置消费清水金额
+     *
+     * @param consumeWaterMoney 消费清水金额
+     */
+    public void setConsumeWaterMoney(Float consumeWaterMoney) {
+        this.consumeWaterMoney = consumeWaterMoney;
     }
 
-    public void setCousume_water_money(float cousume_water_money) {
-        this.cousume_water_money = cousume_water_money;
+    /**
+     * 获取消费泡沫金额
+     *
+     * @return consume_pm_money - 消费泡沫金额
+     */
+    public Float getConsumePmMoney() {
+        return consumePmMoney;
     }
 
-    public float getConsume_pm_money() {
-        return consume_pm_money;
-    }
-
-    public void setConsume_pm_money(float consume_pm_money) {
-        this.consume_pm_money = consume_pm_money;
+    /**
+     * 设置消费泡沫金额
+     *
+     * @param consumePmMoney 消费泡沫金额
+     */
+    public void setConsumePmMoney(Float consumePmMoney) {
+        this.consumePmMoney = consumePmMoney;
     }
 }

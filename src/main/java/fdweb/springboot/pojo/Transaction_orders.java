@@ -1,120 +1,177 @@
 package fdweb.springboot.pojo;
 
+import javax.persistence.*;
+
+@Table(name = "transaction_orders")
 public class Transaction_orders {
+    @Id
+    @Column(name = "orderID")
+    private Integer orderid;
 
-    private int orderID;
+    @Column(name = "merchant_ordersID")
+    private String merchantOrdersid;
 
-    private String merchant_ordersID;
+    @Column(name = "operator_nickname")
+    private String operatorNickname;
 
-    private String operator_nickname;
+    @Column(name = "user_phone")
+    private String userPhone;
 
-    private String user_phone;
+    @Column(name = "pay_order")
+    private String payOrder;
 
-    private String pay_order;
+    @Column(name = "machine_IMEI")
+    private String machineImei;
 
-    private String machine_IMEI;
+    @Column(name = "meal_name")
+    private String mealName;
 
-    private String meal_name;
+    @Column(name = "pay_scene")
+    private String payScene;
 
-    private String pay_scene;
+    @Column(name = "meal_money")
+    private Float mealMoney;
 
-    private float meal_money;
+    @Column(name = "transaction_date")
+    private String transactionDate;
 
-    private String tansaction_date;
-
-    @Override
-    public String toString() {
-        return "Transaction_orders{" +
-                "orderID=" + orderID +
-                ", merchant_ordersID='" + merchant_ordersID + '\'' +
-                ", operator_nickname='" + operator_nickname + '\'' +
-                ", user_phone='" + user_phone + '\'' +
-                ", pay_order='" + pay_order + '\'' +
-                ", machine_IMEI='" + machine_IMEI + '\'' +
-                ", meal_name='" + meal_name + '\'' +
-                ", pay_scene='" + pay_scene + '\'' +
-                ", meal_money=" + meal_money +
-                ", tansaction_date='" + tansaction_date + '\'' +
-                '}';
+    /**
+     * @return orderID
+     */
+    public Integer getOrderid() {
+        return orderid;
     }
 
-    public int getOrderID() {
-        return orderID;
+    /**
+     * @param orderid
+     */
+    public void setOrderid(Integer orderid) {
+        this.orderid = orderid;
     }
 
-    public void setOrderID(int orderID) {
-        this.orderID = orderID;
+    /**
+     * @return merchant_ordersID
+     */
+    public String getMerchantOrdersid() {
+        return merchantOrdersid;
     }
 
-    public String getMerchant_ordersID() {
-        return merchant_ordersID;
+    /**
+     * @param merchantOrdersid
+     */
+    public void setMerchantOrdersid(String merchantOrdersid) {
+        this.merchantOrdersid = merchantOrdersid == null ? null : merchantOrdersid.trim();
     }
 
-    public void setMerchant_ordersID(String merchant_ordersID) {
-        this.merchant_ordersID = merchant_ordersID;
+    /**
+     * @return operator_nickname
+     */
+    public String getOperatorNickname() {
+        return operatorNickname;
     }
 
-    public String getOperator_nickname() {
-        return operator_nickname;
+    /**
+     * @param operatorNickname
+     */
+    public void setOperatorNickname(String operatorNickname) {
+        this.operatorNickname = operatorNickname == null ? null : operatorNickname.trim();
     }
 
-    public void setOperator_nickname(String operator_nickname) {
-        this.operator_nickname = operator_nickname;
+    /**
+     * @return user_phone
+     */
+    public String getUserPhone() {
+        return userPhone;
     }
 
-    public String getUser_phone() {
-        return user_phone;
+    /**
+     * @param userPhone
+     */
+    public void setUserPhone(String userPhone) {
+        this.userPhone = userPhone == null ? null : userPhone.trim();
     }
 
-    public void setUser_phone(String user_phone) {
-        this.user_phone = user_phone;
+    /**
+     * @return pay_order
+     */
+    public String getPayOrder() {
+        return payOrder;
     }
 
-    public String getPay_order() {
-        return pay_order;
+    /**
+     * @param payOrder
+     */
+    public void setPayOrder(String payOrder) {
+        this.payOrder = payOrder == null ? null : payOrder.trim();
     }
 
-    public void setPay_order(String pay_order) {
-        this.pay_order = pay_order;
+    /**
+     * @return machine_IMEI
+     */
+    public String getMachineImei() {
+        return machineImei;
     }
 
-    public String getMachine_IMEI() {
-        return machine_IMEI;
+    /**
+     * @param machineImei
+     */
+    public void setMachineImei(String machineImei) {
+        this.machineImei = machineImei == null ? null : machineImei.trim();
     }
 
-    public void setMachine_IMEI(String machine_IMEI) {
-        this.machine_IMEI = machine_IMEI;
+    /**
+     * @return meal_name
+     */
+    public String getMealName() {
+        return mealName;
     }
 
-    public String getMeal_name() {
-        return meal_name;
+    /**
+     * @param mealName
+     */
+    public void setMealName(String mealName) {
+        this.mealName = mealName == null ? null : mealName.trim();
     }
 
-    public void setMeal_name(String meal_name) {
-        this.meal_name = meal_name;
+    /**
+     * @return pay_scene
+     */
+    public String getPayScene() {
+        return payScene;
     }
 
-    public String getPay_scene() {
-        return pay_scene;
+    /**
+     * @param payScene
+     */
+    public void setPayScene(String payScene) {
+        this.payScene = payScene == null ? null : payScene.trim();
     }
 
-    public void setPay_scene(String pay_scene) {
-        this.pay_scene = pay_scene;
+    /**
+     * @return meal_money
+     */
+    public Float getMealMoney() {
+        return mealMoney;
     }
 
-    public float getMeal_money() {
-        return meal_money;
+    /**
+     * @param mealMoney
+     */
+    public void setMealMoney(Float mealMoney) {
+        this.mealMoney = mealMoney;
     }
 
-    public void setMeal_money(float meal_money) {
-        this.meal_money = meal_money;
+    /**
+     * @return transaction_date
+     */
+    public String getTransactionDate() {
+        return transactionDate;
     }
 
-    public String getTansaction_date() {
-        return tansaction_date;
-    }
-
-    public void setTansaction_date(String tansaction_date) {
-        this.tansaction_date = tansaction_date;
+    /**
+     * @param transactionDate
+     */
+    public void setTransactionDate(String transactionDate) {
+        this.transactionDate = transactionDate == null ? null : transactionDate.trim();
     }
 }

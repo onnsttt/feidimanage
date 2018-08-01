@@ -1,98 +1,139 @@
 package fdweb.springboot.pojo;
 
+import javax.persistence.*;
+
+@Table(name = "machineinfo")
 public class Machineinfo {
+    @Id
+    @Column(name = "machineID")
+    private Integer machineid;
 
-    private int machineID;
-
-    private String IMEI;
+    @Column(name = "IMEI")
+    private String imei;
 
     private String state;
 
-    private String water;//机器剩余水量
+    private String water;
 
-    private String foam; //机器剩余泡沫
+    private String foam;
 
-    private int operatorID;;
+    @Column(name = "operatorID")
+    private Integer operatorid;
 
-    private int handel;
+    private Integer handel;
 
-    private String Online;
+    @Column(name = "Online")
+    private String online;
 
-    @Override
-    public String toString() {
-        return "Machineinfo{" +
-                "machineID=" + machineID +
-                ", IMEI='" + IMEI + '\'' +
-                ", state='" + state + '\'' +
-                ", water='" + water + '\'' +
-                ", foam='" + foam + '\'' +
-                ", operatorID=" + operatorID +
-                ", handel=" + handel +
-                ", Online='" + Online + '\'' +
-                '}';
+    /**
+     * @return machineID
+     */
+    public Integer getMachineid() {
+        return machineid;
     }
 
-    public int getMachineID() {
-        return machineID;
+    /**
+     * @param machineid
+     */
+    public void setMachineid(Integer machineid) {
+        this.machineid = machineid;
     }
 
-    public void setMachineID(int machineID) {
-        this.machineID = machineID;
+    /**
+     * @return IMEI
+     */
+    public String getImei() {
+        return imei;
     }
 
-    public String getIMEI() {
-        return IMEI;
+    /**
+     * @param imei
+     */
+    public void setImei(String imei) {
+        this.imei = imei == null ? null : imei.trim();
     }
 
-    public void setIMEI(String IMEI) {
-        this.IMEI = IMEI;
-    }
-
+    /**
+     * @return state
+     */
     public String getState() {
         return state;
     }
 
+    /**
+     * @param state
+     */
     public void setState(String state) {
-        this.state = state;
+        this.state = state == null ? null : state.trim();
     }
 
+    /**
+     * @return water
+     */
     public String getWater() {
         return water;
     }
 
+    /**
+     * @param water
+     */
     public void setWater(String water) {
-        this.water = water;
+        this.water = water == null ? null : water.trim();
     }
 
+    /**
+     * @return foam
+     */
     public String getFoam() {
         return foam;
     }
 
+    /**
+     * @param foam
+     */
     public void setFoam(String foam) {
-        this.foam = foam;
+        this.foam = foam == null ? null : foam.trim();
     }
 
-    public int getOperatorID() {
-        return operatorID;
+    /**
+     * @return operatorID
+     */
+    public Integer getOperatorid() {
+        return operatorid;
     }
 
-    public void setOperatorID(int operatorID) {
-        this.operatorID = operatorID;
+    /**
+     * @param operatorid
+     */
+    public void setOperatorid(Integer operatorid) {
+        this.operatorid = operatorid;
     }
 
-    public int getHandel() {
+    /**
+     * @return handel
+     */
+    public Integer getHandel() {
         return handel;
     }
 
-    public void setHandel(int handel) {
+    /**
+     * @param handel
+     */
+    public void setHandel(Integer handel) {
         this.handel = handel;
     }
 
+    /**
+     * @return Online
+     */
     public String getOnline() {
-        return Online;
+        return online;
     }
 
+    /**
+     * @param online
+     */
     public void setOnline(String online) {
-        Online = online;
+        this.online = online == null ? null : online.trim();
     }
 }

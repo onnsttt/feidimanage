@@ -1,64 +1,89 @@
 package fdweb.springboot.pojo;
 
+import javax.persistence.*;
+
+@Table(name = "meal")
 public class Meal {
-    private int mealID;
+    @Id
+    @Column(name = "mealId")
+    private Integer mealid;
 
-    private float money;
+    private Float money;
 
-    private int time;
+    private Integer time;
 
-    private int operatorID;
+    @Column(name = "operatorId")
+    private Integer operatorid;
 
     private String name;
 
-    public int getMealID() {
-        return mealID;
+    /**
+     * @return mealId
+     */
+    public Integer getMealid() {
+        return mealid;
     }
 
-    @Override
-    public String toString() {
-        return "Meal{" +
-                "mealID=" + mealID +
-                ", money=" + money +
-                ", time=" + time +
-                ", operatorID=" + operatorID +
-                ", name='" + name + '\'' +
-                '}';
+    /**
+     * @param mealid
+     */
+    public void setMealid(Integer mealid) {
+        this.mealid = mealid;
     }
 
-    public void setMealID(int mealID) {
-        this.mealID = mealID;
-    }
-
-    public float getMoney() {
+    /**
+     * @return money
+     */
+    public Float getMoney() {
         return money;
     }
 
-    public void setMoney(float money) {
+    /**
+     * @param money
+     */
+    public void setMoney(Float money) {
         this.money = money;
     }
 
-    public int getTime() {
+    /**
+     * @return time
+     */
+    public Integer getTime() {
         return time;
     }
 
-    public void setTime(int time) {
+    /**
+     * @param time
+     */
+    public void setTime(Integer time) {
         this.time = time;
     }
 
-    public int getOperatorID() {
-        return operatorID;
+    /**
+     * @return operatorId
+     */
+    public Integer getOperatorid() {
+        return operatorid;
     }
 
-    public void setOperatorID(int operatorID) {
-        this.operatorID = operatorID;
+    /**
+     * @param operatorid
+     */
+    public void setOperatorid(Integer operatorid) {
+        this.operatorid = operatorid;
     }
 
+    /**
+     * @return name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @param name
+     */
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 }
