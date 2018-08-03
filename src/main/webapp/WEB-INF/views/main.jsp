@@ -95,13 +95,13 @@
               <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
               <%=session.getAttribute("username")%>
           </span>
-                <a href="javascript:;" class="tpl-user-panel-action-link"> <span class="am-icon-pencil"></span> 账号设置</a>
+                <%--<a href="javascript:;" class="tpl-user-panel-action-link"> <span class="am-icon-pencil"></span> 账号设置</a>--%>
             </div>
         </div>
 
         <!-- 菜单 -->
         <ul class="sidebar-nav">
-            <li class="sidebar-nav-heading">Components <span class="sidebar-nav-heading-info"> 附加组件</span></li>
+            <%--<li class="sidebar-nav-heading">Components <span class="sidebar-nav-heading-info"> 附加组件</span></li>--%>
             <li class="sidebar-nav-link">
                 <a href="/main" class="active">
                     <i class="am-icon-home sidebar-nav-link-logo"></i> 首页

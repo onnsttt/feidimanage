@@ -182,4 +182,18 @@ public class Consume_record {
     public void setConsumePmMoney(Float consumePmMoney) {
         this.consumePmMoney = consumePmMoney;
     }
+
+    @Override
+    public String toString() {
+        return "Consume_record{" +
+                "consumeId=" + consumeId +
+                ", userPhone='" + userPhone + '\'' +
+                ", consumeMoney=" + consumeMoney +
+                ", consumeTime='" + consumeTime + '\'' +
+                ", transactionDate='" + transactionDate + '\'' +
+                ", machineId=" + machineId +
+                ", consumeWaterMoney=" + consumeWaterMoney +
+                ", consumePmMoney=" + consumePmMoney +
+                '}';
+    }
 }

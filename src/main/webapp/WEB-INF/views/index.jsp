@@ -5,8 +5,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Amaze UI Admin index Examples</title>
-    <meta name="description" content="这是一个 index 页面">
+    <title>长沙飞涤网络科技有限公司</title>
+    <meta name="description" content="长沙飞涤网络科技有限公司">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
@@ -31,19 +31,19 @@
 <script src="resources/js/theme.js"></script>
 <div class="am-g tpl-g">
     <!-- 风格切换 -->
-    <%--<div class="tpl-skiner">--%>
-        <%--<div class="tpl-skiner-toggle am-icon-cog">--%>
-        <%--</div>--%>
-        <%--<div class="tpl-skiner-content">--%>
-            <%--<div class="tpl-skiner-content-title">--%>
-                <%--选择主题--%>
-            <%--</div>--%>
-            <%--<div class="tpl-skiner-content-bar">--%>
-                <%--<span class="skiner-color skiner-white" data-color="theme-white"></span>--%>
-                <%--<span class="skiner-color skiner-black" data-color="theme-black"></span>--%>
-            <%--</div>--%>
-        <%--</div>--%>
-    <%--</div>--%>
+    <div class="tpl-skiner">
+        <div class="tpl-skiner-toggle am-icon-cog">
+        </div>
+        <div class="tpl-skiner-content">
+            <div class="tpl-skiner-content-title">
+                选择主题
+            </div>
+            <div class="tpl-skiner-content-bar">
+                <span class="skiner-color skiner-white" data-color="theme-white"></span>
+                <span class="skiner-color skiner-black" data-color="theme-black"></span>
+            </div>
+        </div>
+    </div>
     <div class="tpl-login">
         <div class="tpl-login-content">
             <div class="tpl-login-logo">
@@ -70,9 +70,7 @@
 
                 </div>
                 <div class="am-form-group">
-
-                    <input id="submit" type="submit" class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success  tpl-login-btn">提交</input>
-
+                    <input id="submit" type="submit" class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success  tpl-login-btn"/>
                 </div>
             </form>
         </div>
