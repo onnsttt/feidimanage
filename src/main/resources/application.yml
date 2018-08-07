@@ -12,9 +12,9 @@ spring:
       suffix: .jsp
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://118.126.102.53:3306/machine?autoReconnect=true
-    username: feidi
-    password: Feidi123456
+    url: 
+    username: 
+    password: 
     driver-class-name: com.mysql.jdbc.Driver
     #初始化连接池的补充设置，应用到上面的数据源中
       # 下面为连接池的补充设置，应用到上面所有数据源中
