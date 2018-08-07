@@ -40,12 +40,31 @@ var pageData = {
             bInfo: false, //页脚信息
             dom: 'ti'
         });
-
-
+        var data =[];
+        getdata = function () {
+            $.ajax({
+                    url: "/operator/getinmoney",
+                    type: "post",
+                    scriptCharset:"utf-8",
+                    dataType:"text",
+                    async:false,
+                    success: function (date) {
+                        var str1 = new Array();
+                        date = date.substring(1,date.length-1);
+                        str1 = date.split(",");
+                        for(i in str1){
+                            data.push(Number(str1[i]));
+                        }
+                    },
+                    error: function () {
+                }
+            });
+        }
+        getdata();
         // ==========================
         // 百度图表A http://echarts.baidu.com/
         // ==========================
-
+        var dat=[1.4,2.2,3.4,4.5,5.6,6.7];
         var echartsA = echarts.init(document.getElementById('tpl-echarts'));
         option = {
             tooltip: {
@@ -61,20 +80,25 @@ var pageData = {
             xAxis: [{
                 type: 'category',
                 boundaryGap: false,
-                data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+                data: ['1', '2', '3', '4', '5', '6', '7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31']
             }],
             yAxis: [{
-                type: 'value'
+                type: 'value',
+                axisLabel:{
+                    formatter:function (value,index) {
+                        return value.toFixed(1);
+                    }
+                }
             }],
             textStyle: {
                 color: '#838FA1'
             },
             series: [{
-                name: '邮件营销',
+                name: '当天收入',
                 type: 'line',
                 stack: '总量',
                 areaStyle: { normal: {} },
-                data: [120, 132, 101, 134, 90],
+                data: data,
                 itemStyle: {
                     normal: {
                         color: '#1cabdb',
@@ -323,8 +347,24 @@ $('.tpl-skiner-content-bar').find('span').on('click', function() {
     storageSave(saveSelectColor);
 
 })
-
-
+$(function () {
+   getmoney = function (){
+        $.ajax({
+            url: "/operator/getAllMoneyByMonth",
+            type: "post",
+            scriptCharset:"utf-8",
+            dataType:"text",
+            async:false,
+            success: function (date) {
+                // alert(date);
+                $("#Monthly_income").html(date.substring(1,date.length-1)+"元");
+            },
+            error: function () {
+            }
+        });
+    }
+    getmoney();
+})
 
 
 // 侧边菜单开关

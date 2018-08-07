@@ -1,8 +1,8 @@
-<%@ page import="java.util.Date" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: 欧鹏程
-  Date: 2018/7/15
-  Time: 16:37
+  Date: 2018/8/5
+  Time: 16:25
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -36,7 +36,7 @@
     <header>
         <!-- logo -->
         <div class="am-fl tpl-header-logo">
-            <a href="javascript:;"><img src="../../resources/img/logo.png" alt=""></a>
+            <a href="javascript:;"><img src="../../resources/img/fdlogo.png" alt=""></a>
         </div>
         <!-- 右侧内容 -->
         <div class="tpl-header-fluid">
@@ -58,18 +58,18 @@
                 <ul>
                     <!-- 欢迎语 -->
                     <li class="am-text-sm tpl-header-navbar-welcome">
-                        <a href="javascript:;">欢迎您，<span> </span> </a>
+                        <a href="javascript:;">欢迎您，<span> <%=request.getSession().getAttribute("username")%></span> </a>
                     </li>
 
-                    <!-- 新邮件 -->
-                    <li class="am-dropdown tpl-dropdown" data-am-dropdown>
-                        <a href="javascript:;" class="am-dropdown-toggle tpl-dropdown-toggle" data-am-dropdown-toggle>
-                            <i class="am-icon-envelope"></i>
-                            <span class="am-badge am-badge-success am-round item-feed-badge">0</span>
-                        </a>
+                    <%--<!-- 新邮件 -->--%>
+                    <%--<li class="am-dropdown tpl-dropdown" data-am-dropdown>--%>
+                        <%--<a href="javascript:;" class="am-dropdown-toggle tpl-dropdown-toggle" data-am-dropdown-toggle>--%>
+                            <%--<i class="am-icon-envelope"></i>--%>
+                            <%--<span class="am-badge am-badge-success am-round item-feed-badge">0</span>--%>
+                        <%--</a>--%>
 
                     <li class="am-text-sm">
-                        <a href="javascript:;">
+                    <a href="/exit">
                             <span class="am-icon-sign-out"></span> 退出
                         </a>
                     </li>
@@ -89,34 +89,39 @@
         <div class="tpl-sidebar-user-panel">
             <div class="tpl-user-panel-slide-toggleable">
                 <div class="tpl-user-panel-profile-picture">
-                    <img src="../../resources/img/user04.png" alt="">
+                    <img src="../../resources/img/images.png" alt="">
                 </div>
                 <span class="user-panel-logged-in-text">
               <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
               <%=session.getAttribute("username")%>
           </span>
-                <%--<a href="javascript:;" class="tpl-user-panel-action-link"> <span class="am-icon-pencil"></span> 账号设置</a>--%>
+                <a href="javascript:;" class="tpl-user-panel-action-link"> <span class="am-icon-pencil"></span> 账号设置</a>
             </div>
         </div>
 
         <!-- 菜单 -->
         <ul class="sidebar-nav">
             <%--<li class="sidebar-nav-heading">Components <span class="sidebar-nav-heading-info"> 附加组件</span></li>--%>
-            <li class="sidebar-nav-link">
-                <a href="/main" class="active">
-                    <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
-                </a>
-            </li>
-            <li class="sidebar-nav-link">
-                <a href="/tables">
-                    <i class="am-icon-table sidebar-nav-link-logo"></i> 机器管理
-                </a>
-            </li>
-            <li class="sidebar-nav-link">
-                <a href="/consume">
-                    <i class="am-icon-calendar sidebar-nav-link-logo"></i>收入详情
-                </a>
-            </li>
+                <li class="sidebar-nav-link">
+                    <a href="/operator/main">
+                        <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="/operator/tables">
+                        <i class="am-icon-table sidebar-nav-link-logo"></i> 机器管理
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="/operator/consume">
+                        <i class="am-icon-calendar sidebar-nav-link-logo"></i> 收入详情
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="/operator/meal">
+                        <i class="am-icon-calendar sidebar-nav-link-logo"></i> 套餐管理
+                    </a>
+                </li>
         </ul>
     </div>
 
@@ -167,7 +172,7 @@
                         <div class="widget-statistic-body">
                             <div class="widget-statistic-value">
                                 <%--当前月份的收入--%>
-                                <%--<p id="Monthly_income"><%=Mothly_income%></p>--%>
+                                <p id="Monthly_income" style="float:right;"></p>
                             </div>
                             <span class="widget-statistic-icon am-icon-credit-card-alt"></span>
                         </div>

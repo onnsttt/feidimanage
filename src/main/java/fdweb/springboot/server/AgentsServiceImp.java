@@ -16,14 +16,10 @@ public class AgentsServiceImp extends BaseService<Agents> implements AgentsServi
     private AgentsMapper agentsMapper;
 
     @Override
-    public boolean login(String username, String password) {
+    public Agents login(String username, String password) {
         AgentsExample example = new AgentsExample();
         example.createCriteria().andNameEqualTo(username).andPasswordEqualTo(password);
-        List<Agents> list=agentsMapper.selectByExample(example);
-        System.out.println(list.size());
-        if(list==null||list.size()==0)
-            return  false;
-        return true;
+        return agentsMapper.selectByExample(example).size()==0?null:agentsMapper.selectByExample(example).get(0);
     }
 
     @Override

@@ -26,6 +26,8 @@ public class SpringbootApplicationTests {
     @Autowired
     Consume_RecordServiceImp consume_recordServiceImp;
 
+    @Autowired
+
 	@Test
 	public void contextLoads() {
 	}
@@ -43,4 +45,8 @@ public class SpringbootApplicationTests {
 	    for (Consume_record consume_record:list)
             System.out.println(consume_record.toString());
 	}
+	@Test
+    public void testurl(){
+
+    }
 }

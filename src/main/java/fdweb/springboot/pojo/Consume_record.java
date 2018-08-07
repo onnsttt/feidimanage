@@ -1,5 +1,7 @@
 package fdweb.springboot.pojo;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import javax.persistence.*;
 
 @Table(name = "consume_record")

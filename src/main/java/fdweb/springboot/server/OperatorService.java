@@ -9,4 +9,8 @@ public interface OperatorService {
 
     public boolean updateInfo(String username,Operator operator);
 
+    public boolean insetOperator(Operator operator);
+
+    public Operator login(String username, String password);
+
 }

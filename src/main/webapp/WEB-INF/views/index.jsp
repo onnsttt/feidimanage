@@ -52,7 +52,7 @@
 
 
 
-            <form class="am-form tpl-form-line-form" action="/login">
+            <form class="am-form tpl-form-line-form" action="/login" method="post">
                 <div class="am-form-group">
                     <input type="text" class="tpl-form-input" name="username" id="username" placeholder="请输入账号">
 
@@ -70,7 +70,7 @@
 
                 </div>
                 <div class="am-form-group">
-                    <input id="submit" type="submit" class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success  tpl-login-btn"/>
+                    <input id="submit" type="submit" value="登录" class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success  tpl-login-btn"/>
                 </div>
             </form>
         </div>
